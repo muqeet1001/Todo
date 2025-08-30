@@ -1,0 +1,9 @@
+@import "tailwindcss";
+ /* Make the gradient fill the screen */
+html, body { height: 100%; }
+
+body {
+    background: #000;
+     
+}
+
