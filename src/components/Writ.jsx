@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { todocontext } from "../Wrapper";
 
-function Writ(props) {
-  const todo = props.todo;
-  const settodo = props.settodo;
+function Writ() {
+  const [todo, settodo] = useContext(todocontext);
   const DeleteHandler = (id) => {
     const filter = todo.filter((todo) => todo.id != id);
     settodo(filter);
   };
+ 
   const task = todo.map((task, index) => {
     return (
       <li key={index}>
